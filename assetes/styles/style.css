@@ -137,7 +137,6 @@ button {
 }
 
 /* ===== download(desktop) ===== */
-.download-container {}
 
 .download {
     margin-top: 1.3rem !important;
@@ -176,7 +175,6 @@ button {
     text-align: right;
 }
 
-.des-container {}
 
 .des-container div {
     border-top: 2px solid #00A680;
@@ -197,27 +195,61 @@ button {
 }
 
 /*  ====  ANIMATED WAVES  ====  */
+
+@keyframes row {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+@keyframes row2 {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1500px;
+    }
+}
+
 .animated-waves {
-    /* background-image: url(../images/011_bg_wave.svg);
-    height: 5rem;
-    width: 100% !important; */
+    position: relative;
+    width: 100% !important;
+    height: 20rem !important;
+    overflow: hidden;
 }
 
 .wave {
-    background-image: url(../images/011_bg_wave.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 8rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 20rem !important;
+    background: url("../images/bg-wave.png");
+    background-size: 150rem 20rem;
 }
 
-.wave-1 {}
+.wave1 {
+    animation: row 30s linear infinite;
+    z-index: 2;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
 
-.wave-2 {}
+.wave2 {
+    animation: row2 15s linear infinite;
+    z-index: 1;
+    animation-delay: -5s;
+    bottom: 1rem;
+}
 
 /*  ====  Section2 --> possibilities  ====  */
-.possibilities {}
 
-.icons {}
 
 .line {
     position: absolute;
@@ -260,8 +292,6 @@ button {
     background-image: url(../images/017_icon_nearme.svg);
 }
 
-.mobile-img {}
-
 .mobile-img img {
     width: 450px !important;
 }
@@ -288,15 +318,12 @@ button {
     min-height: 20rem;
 }
 
-.app-download {}
 
 .app-title {
     color: #00A680;
 }
 
-.app-para-1 {}
 
-.app-number {}
 
 .app-number img {
     width: 6rem;
@@ -330,8 +357,6 @@ button {
         width: 22%;
     }
 }
-
-.app-para-2 {}
 
 /* .app-links {}
  */
@@ -410,13 +435,10 @@ button {
     }
 }
 
-.idea {}
 
 .idea-title {
     color: #00A680;
 }
-
-.idea-description {}
 
 
 .idea-img {
